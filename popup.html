@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>InteractAI Voice</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h3>InteractAI Voice</h3>
+    <div id="status">Idle</div>
+    <button id="micBtn">🎤 Start Listening</button>
+    <div id="transcript"></div>
+
+    <div class="quick-actions">
+      <button class="qa" data-cmd="Summarize this page in one sentence.">Summarize</button>
+      <button class="qa" data-cmd="Find pricing section and highlight it.">Find Pricing</button>
+      <button class="qa" data-cmd="Find contact information on this page.">Find Contacts</button>
+      <button class="qa" data-cmd="Read this page aloud.">Read Aloud</button>
+    </div>
+
+    <label>Groq API Key</label>
+    <input id="apiKey" type="password" placeholder="gsk_..." />
+    <button id="saveKey">Save Key</button>
+
+    <div id="response"></div>
+  </div>
+
+  <script src="helper.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

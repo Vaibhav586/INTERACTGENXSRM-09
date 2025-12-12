@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; width: 320px; padding: 10px; }
+.container h3 { margin: 0 0 8px 0; }
+#status { font-size: 12px; color: #666; margin-bottom: 8px; }
+#micBtn { width: 100%; padding: 10px; font-size: 16px; margin-bottom: 8px; }
+.quick-actions { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px; }
+.quick-actions .qa { padding:6px; flex: 1 1 45%; }
+#apiKey { width:100%; padding:6px; box-sizing:border-box; margin-bottom:6px; }
+#saveKey { width:100%; padding:8px; }
+#transcript, #response { margin-top:8px; font-size:13px; color:#222; max-height:120px; overflow:auto; }

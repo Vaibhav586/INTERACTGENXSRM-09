@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug InteractAI</title>
+</head>
+<body>
+    <h2>Debug InteractAI Extension</h2>
+    <button onclick="clearStorage()">Clear All Storage</button>
+    <button onclick="checkStorage()">Check Storage</button>
+    <div id="output"></div>
+
+    <script>
+        function clearStorage() {
+            chrome.storage.local.clear(() => {
+                document.getElementById('output').innerHTML = 'Storage cleared!';
+            });
+        }
+        
+        function checkStorage() {
+            chrome.storage.local.get(null, (data) => {
+                document.getElementById('output').innerHTML = 'Storage: ' + JSON.stringify(data, null, 2);
+            });
+        }
+    </script>
+</body>
+</html>
