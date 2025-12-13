@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "InteractAI Voice",
+  "version": "1.0",
+  "description": "Voice-controlled AI for webpages using Hugging Face GPT-2",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tts"
+  ],
+"host_permissions": [
+  "https://api-inference.huggingface.co/*",
+  "https://router.huggingface.co/*"
+],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InteractAI Voice</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h3>🎙️ InteractAI Voice</h3>
+    </header>
+
+    <div id="status" class="status-idle" role="status" aria-live="polite">
+      Idle
+    </div>
+
+    <button id="micBtn" class="mic-btn" aria-label="Start voice recognition">
+      🎤 <span id="micText">Start Listening</span>
+    </button>
+
+    <div id="transcript" class="transcript-box" role="log" aria-live="polite"></div>
+
+    <div class="quick-actions">
+      <h4>Quick Actions</h4>
+      <button class="qa" data-cmd="summarize" title="Summarize this page">
+        📄 Summarize
+      </button>
+      <button class="qa" data-cmd="pricing" title="Find pricing information">
+        💰 Find Pricing
+      </button>
+      <button class="qa" data-cmd="contacts" title="Find contact information">
+        📞 Find Contacts
+      </button>
+      <button class="qa" data-cmd="read" title="Read page content aloud">
+        🔊 Read Aloud
+      </button>
+    </div>
+
+    <div class="api-section">
+      <label for="apiKey">Hugging Face API Key</label>
+      <div class="input-group">
+        <input 
+          id="apiKey" 
+          type="password" 
+          placeholder="hf_..." 
+          aria-label="Hugging Face API Key"
+        />
+        <button id="toggleKey" class="toggle-key" aria-label="Toggle API key visibility">
+          👁️
+        </button>
+      </div>
+      <button id="saveKey" class="save-btn">💾 Save Key</button>
+      <small id="keyStatus" class="key-status"></small>
+    </div>
+
+    <div id="response" class="response-box" role="region" aria-live="polite"></div>
+
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <span>Processing...</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
